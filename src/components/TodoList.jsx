@@ -25,24 +25,24 @@ const TodoList = () => {
         setTodo(cloneTodo)
     }
     return (
-        <form>
+        <div className='left'>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
 
-            <button type="button" onClick={ (e) => handleSubmit() }>SUBMIT</button>
+            <span type="button" onClick={ (e) => handleSubmit() }>SUBMIT</span>
             <br />
             -----------------------
             <br />
             {
                 todo && todo.length > 0 &&
-                todo.map((item)=>{
+                todo?.map((item)=>{
                     return(
                         <div key={item.id}>
-                            {item.todo} <button onClick={(e) => handleDeleteToto(e,item.id)}>X</button>
+                            {item.todo} <span onClick={(e) => handleDeleteToto(e,item.id)}>X</span>
                         </div>
                     )
                 })
             }
-        </form>
+        </div>
     )
 }
 
