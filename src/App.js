@@ -1,3 +1,4 @@
+import './App.scss';
 import AddnewProduct from "./components/AddnewProduct";
 import TodoList from "./components/TodoList";
 

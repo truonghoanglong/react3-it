@@ -33,7 +33,3 @@ code {
   width: 100%;
   gap: 20px;
 }
-.input{
-  display: flex;
-  flex-direction: column;
-}
