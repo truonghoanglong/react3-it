@@ -9,12 +9,19 @@ const AddnewProduct = () => {
     const [isShow,setIsShow] = useState(false)
 
     const handleSubmit = () =>{
-        const desc = {name,price,size,color};
+        const object = {name,price,size,color};
+        
+        // const product = localStorage.getItem("data")
+        // if(product){
+        //     const arr = JSON.parse(product)
+        //     arr.push(object)
+        //     localStorage.setItem("data", JSON.stringify(arr));
+        // }else{
+        //     localStorage.setItem("data", JSON.stringify([object]));
+        // }
 
-        localStorage.setItem("data", JSON.stringify(desc) );
-
-        var x = localStorage.getItem("data");
     }
+    
 
     const handleHideShow = () => {
         setIsShow(!isShow)
@@ -26,7 +33,7 @@ const AddnewProduct = () => {
 
             { isShow
                 ?  
-                    <fieldset>
+                <fieldset>
                 <legend>Personalia:</legend>
 
                 <div className="input__product">
@@ -52,14 +59,10 @@ const AddnewProduct = () => {
                 <div>
                     <button onClick={()=>handleSubmit()}>submit</button>
                 </div>
-                    </fieldset>
+                </fieldset>
                 : 
                 ""
             }
-
-       
-
-        
 
         </div>
     )
